@@ -1,4 +1,4 @@
-print('Digite seu primeiro nome')
+print('Digite seu primeiro nome:')
 x = input()
 
-print('Bem-vindo ao Python,' + x)
+print('Bem-vindo ao Python, ' + x)

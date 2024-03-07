@@ -1,3 +1,7 @@
+#1. Um Círculo
+#A classe deve ter um atributo raio para armazenar a dimensão da figura e métodos para calcular sua área e sua circunferência.
+#Escrever um programa para testar a classe.
+
 import math
 
 class Circulo:

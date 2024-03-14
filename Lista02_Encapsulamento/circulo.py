@@ -27,13 +27,13 @@ class UI:
     @staticmethod
     def main():
         c = Circulo()
-        c.set_raio(int(input('Digite o valor do raio do círculo: ')))
+        c.set_raio(float(input('Digite o valor do raio do círculo: ')))
 
         while True:
-            x = int(input('Digite 0 para inserir outro valor de raio, 1 para saber a área do círculo, 2 para a circunferência, ou 3 para sair: '))
+            x = float(input('Digite 0 para inserir outro valor de raio, 1 para saber a área do círculo, 2 para a circunferência, ou 3 para sair: '))
             
             if x == 0:
-                c.set_raio(int(input('Digite o novo valor do raio: ')))
+                c.set_raio(float(input('Digite o novo valor do raio: ')))
             elif x == 1:
                 print('Área do Circulo:', c.calc_area())
             elif x == 2:

@@ -1,3 +1,10 @@
+#1. Um Círculo
+#Escrever a classe Círculo de acordo com o diagrama UML. A classe deve ter um atributo raio
+#para armazenar a dimensão da figura e métodos para calcular sua área e sua circunferência, além dos métodos de
+#acesso para definir e recuperar o atributo raio.
+#Escrever um programa para testar a classe.
+
+
 import math
 
 class Circulo:

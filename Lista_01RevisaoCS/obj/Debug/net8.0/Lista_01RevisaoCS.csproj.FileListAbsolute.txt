@@ -1,0 +1,5 @@
+/workspaces/2024_1_POO/Lista_01RevisaoCS/obj/Debug/net8.0/Lista_01RevisaoCS.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/2024_1_POO/Lista_01RevisaoCS/obj/Debug/net8.0/Lista_01RevisaoCS.AssemblyInfoInputs.cache
+/workspaces/2024_1_POO/Lista_01RevisaoCS/obj/Debug/net8.0/Lista_01RevisaoCS.AssemblyInfo.cs
+/workspaces/2024_1_POO/Lista_01RevisaoCS/obj/Debug/net8.0/Lista_01RevisaoCS.csproj.CoreCompileInputs.cache
+/workspaces/2024_1_POO/Lista_01RevisaoCS/obj/Debug/net8.0/Lista_01RevisaoCS.sourcelink.json

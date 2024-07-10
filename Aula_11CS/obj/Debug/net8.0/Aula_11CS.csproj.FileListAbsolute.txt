@@ -1,0 +1,15 @@
+/workspaces/2024_1_POO/Aula_11CS/obj/Debug/net8.0/Aula_11CS.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/2024_1_POO/Aula_11CS/obj/Debug/net8.0/Aula_11CS.AssemblyInfoInputs.cache
+/workspaces/2024_1_POO/Aula_11CS/obj/Debug/net8.0/Aula_11CS.AssemblyInfo.cs
+/workspaces/2024_1_POO/Aula_11CS/obj/Debug/net8.0/Aula_11CS.csproj.CoreCompileInputs.cache
+/workspaces/2024_1_POO/Aula_11CS/obj/Debug/net8.0/Aula_11CS.sourcelink.json
+/workspaces/2024_1_POO/Aula_11CS/bin/Debug/net8.0/Aula_11CS
+/workspaces/2024_1_POO/Aula_11CS/bin/Debug/net8.0/Aula_11CS.deps.json
+/workspaces/2024_1_POO/Aula_11CS/bin/Debug/net8.0/Aula_11CS.runtimeconfig.json
+/workspaces/2024_1_POO/Aula_11CS/bin/Debug/net8.0/Aula_11CS.dll
+/workspaces/2024_1_POO/Aula_11CS/bin/Debug/net8.0/Aula_11CS.pdb
+/workspaces/2024_1_POO/Aula_11CS/obj/Debug/net8.0/Aula_11CS.dll
+/workspaces/2024_1_POO/Aula_11CS/obj/Debug/net8.0/refint/Aula_11CS.dll
+/workspaces/2024_1_POO/Aula_11CS/obj/Debug/net8.0/Aula_11CS.pdb
+/workspaces/2024_1_POO/Aula_11CS/obj/Debug/net8.0/Aula_11CS.genruntimeconfig.cache
+/workspaces/2024_1_POO/Aula_11CS/obj/Debug/net8.0/ref/Aula_11CS.dll

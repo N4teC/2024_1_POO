@@ -27,9 +27,9 @@ class Cliente:
         return f"{self.__id} - {self.__nome} - {self.__email} - {self.__fone}"
 
 class Venda:
-    def __init__(self, id:int, data:datetime, carrinho:bool, total:float, idCliente:int):
+    def __init__(self, id:int, data:str, carrinho:bool, total:float, idCliente:int):
         self.set_id(id)
-        self.set_data(data)
+        self.set_data(datetime.datetime.fromisoformat(data))
         self.set_carrinho(carrinho)
         self.set_total(total)
         self.set_idCliente(idCliente)
@@ -45,8 +45,8 @@ class Venda:
         return self.__idCliente
     def set_id(self, id:int):
         self.__id = id
-    def set_data(self, data:datetime):
-        self.__data = data
+    def set_data(self, data:str):
+        self.__data = datetime.datetime.fromisoformat(data)
     def set_carrinho(self, carrinho:bool):
         self.__carrinho = carrinho
     def set_total(self, total:float):
@@ -233,8 +233,8 @@ class Vendas:
         with open("vendas.json", mode="r") as arquivo:
             texto_arquivo = json.load(arquivo)
             for obj in texto_arquivo:
-                c = Cliente(obj["id"], obj["data"], obj["carrinho"], obj["total"], obj["idCliente"])
-                cls.objetos.append(c)       
+                v = Venda(obj["id"], obj["data"], obj["carrinho"], obj["total"], obj["idCliente"])
+                cls.objetos.append(v)       
 
 class VendaItens:
     objetos = []                # atributo da classe e não de uma instância da classe
@@ -283,8 +283,8 @@ class VendaItens:
         with open("vendaitens.json", mode="r") as arquivo:
             texto_arquivo = json.load(arquivo)
             for obj in texto_arquivo:
-                c = Cliente(obj["id"], obj["qtd"], obj["preco"], obj["idVenda"], obj["idProduto"])
-                cls.objetos.append(c)
+                v = VendaItem(obj["id"], obj["qtd"], obj["preco"], obj["idVenda"], obj["idProduto"])
+                cls.objetos.append(v)
                 
 class Produtos:
     objetos = []                # atributo da classe e não de uma instância da classe
@@ -333,8 +333,8 @@ class Produtos:
         with open("produtos.json", mode="r") as arquivo:
             texto_arquivo = json.load(arquivo)
             for obj in texto_arquivo:
-                c = Cliente(obj["id"], obj["descricao"], obj["preco"], obj["estoque"], obj["idCategoria"])
-                cls.objetos.append(c)
+                p = Produto(obj["id"], obj["descricao"], obj["preco"], obj["estoque"], obj["idCategoria"])
+                cls.objetos.append(p)
                 
 class Categorias:
     objetos = []                # atributo da classe e não de uma instância da classe
@@ -380,7 +380,7 @@ class Categorias:
         with open("categorias.json", mode="r") as arquivo:
             texto_arquivo = json.load(arquivo)
             for obj in texto_arquivo:
-                c = Cliente(obj["id"], obj["descricao"])
+                c = Categoria(obj["id"], obj["descricao"])
                 cls.objetos.append(c)
                 
 class UI:
@@ -425,7 +425,7 @@ class UI:
         print('Qualquer outra tecla - Voltar')
         i.append(int(input('Digite a opção que deseja interagir: ')))
         
-        print(i)
+        #print(i)
         return i
     @staticmethod 
     def produto_listar():
@@ -465,8 +465,8 @@ class UI:
     def categoria_inserir():
         descricao = input('Informe a descrição da categoria: ')
         
-        a = Produto(0, descricao)
-        Produtos.inserir(a)
+        a = Categoria(0, descricao)
+        Categorias.inserir(a)
     @staticmethod 
     def categoria_atualizar():
         UI.categoria_listar()

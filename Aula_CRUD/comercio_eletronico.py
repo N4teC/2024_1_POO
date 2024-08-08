@@ -1,11 +1,12 @@
+import datetime
 import json
 
 class Cliente:
     def __init__(self, id, nome, email, fone):
-        self.get_id(id)
-        self.get_nome(nome)
-        self.get_email(email)
-        self.get_fone(fone)
+        self.set_id(id)
+        self.set_nome(nome)
+        self.set_email(email)
+        self.set_fone(fone)
     def get_id(self):
         return self.__id
     def get_nome(self):
@@ -49,36 +50,107 @@ class Venda:
     def set_id(self, id):
         if id > 0 and id == int: self.__id = id
         else: raise ValueError
-    
+    def set_data(self, data):
+        if data == datetime: self.__data = data
+        else: raise ValueError
+    def set_carrinho(self, carrinho):
+        if carrinho == bool: self.__carrinho = carrinho
+        else: raise ValueError
+    def set_total(self, total):
+        if total == float: self.__total = total
+        else: raise ValueError
+    def set_idCliente(self, idCliente):
+        if idCliente == int and idCliente > 0: self.__idCliente = idCliente
+        else: raise ValueError
     def __str__(self):
         return f"{self.__id} - {self.__data} - {self.__carrinho} - {self.__total} - {self.__idCliente}"
-        
+    
 class VendaItem:
     def __init__(self, id, qtd, preco, idVenda, idProduto):
-        self.id = id
-        self.qtd = qtd
-        self.preco = preco
-        self.idVenda = idVenda
-        self.idProduto = idProduto
+        self.set_id(id)
+        self.set_qtd(qtd)
+        self.set_preco(preco)
+        self.set_idVenda(idVenda)
+        self.set_idProduto(idProduto)
+    def get_id(self):
+        return self.__id
+    def get_qtd(self):
+        return self.__qtd
+    def get_preco(self):
+        return self.__preco
+    def get_idVenda(self):
+        return self.__idVenda
+    def get_idProduto(self):
+        return self.__idProduto
+    def set_id(self, id):
+        if id > 0 and id == int: self.__id = id
+        else: raise ValueError
+    def set_qtd(self, qtd):
+        if qtd > 0 and qtd == int: self.__qtd = qtd
+        else: raise ValueError
+    def set_preco(self, preco):
+        if preco > 0 and preco == float: self.__preco = preco
+        else: raise ValueError
+    def set_idVenda(self, idVenda):
+        if idVenda > 0 and idVenda == int: self.__idVenda = idVenda
+        else: raise ValueError
+    def set_idProduto(self, idProduto):
+        if idProduto > 0 and idProduto == int: self.__idProduto = idProduto
+        else: raise ValueError
     def __str__(self):
-        return f"{self.id} - {self.qtd} - {self.preco} - {self.idVenda} - {self.idProduto}"
+        return f"{self.__id} - {self.__qtd} - {self.__preco} - {self.__idVenda} - {self.__idProduto}"
 
 class Produto:
     def __init__(self, id, descricao, preco, estoque, idCategoria):
-        self.id = id
-        self.descricao = descricao
-        self.preco = preco
-        self.estoque = estoque
-        self.idCategoria = idCategoria
+        self.set_id(id)
+        self.set_descricao(descricao)
+        self.get_preco(preco)
+        self.set_estoque(estoque)
+        self.set_idCategoria(idCategoria)
+    def get_id(self):
+        return self.__id
+    def get_descricao(self):
+        return self.__descricao
+    def get_preco(self):
+        return self.__preco
+    def get_estoque(self):
+        return self.__estoque
+    def get_idCategoria(self):
+        return self.__idCategoria
+    def set_id(self, id):
+        if id > 0 and id == int: self.__id = id
+        else: raise ValueError
+    def set_descricao(self, descricao):
+        if descricao == str: self.__descricao = descricao
+        else: raise ValueError
+    def set_preco(self, preco):
+        if preco > 0 and preco == float: self.__preco = preco
+        else: raise ValueError
+    def set_estoque(self, estoque):
+        if estoque == int: self.__estoque = estoque
+        else: raise ValueError
+    def set_idCategoria(self, idCategoria):
+        if idCategoria > 0 and idCategoria == int: self.__idCategoria = idCategoria
+        else: raise ValueError
     def __str__(self):
-        return f"{self.id} - {self.descricao} - {self.preco} - {self.estoque} - {self.idCategoria}"
+        return f"{self.__id} - {self.__descricao} - {self.__preco} - {self.__estoque} - {self.__idCategoria}"
 
 class Categoria:
     def __init__(self, id, descricao):
-        self.id = id
-        self.descricao = descricao
+        self.set_id(id)
+        self.set_descricao(descricao)
+    def get_id(self):
+        return self.__id
+    def get_descricao(self):
+        return self.__descricao
+    def set_id(self, id):
+        if id > 0 and id == int: self.__id = id
+        else: raise ValueError
+    def set_descricao(self, descricao):
+        if descricao == str: self.__descricao = descricao
+        else: raise ValueError
     def __str__(self):
-        return f"{self.id} - {self.descricao}"
+        return f"{self.__id} - {self.__descricao}"
         
 # Persistência: Modelo -> Arquivo Json    
 class Clientes:

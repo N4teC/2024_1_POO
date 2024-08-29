@@ -76,8 +76,11 @@ class Vendas:
     @classmethod
     def abrir(cls):
         cls.objetos = []
-        with open("./json/vendas.json", mode="r") as arquivo:
-            texto_arquivo = json.load(arquivo)
-            for obj in texto_arquivo:
-                v = Venda(obj["id"], obj["data"], obj["carrinho"], obj["total"], obj["idCliente"])
-                cls.objetos.append(v)
+        try:
+            with open("./json/vendas.json", mode="r") as arquivo:
+                texto_arquivo = json.load(arquivo)
+                for obj in texto_arquivo:
+                    v = Venda(obj["id"], obj["data"], obj["carrinho"], obj["total"], obj["idCliente"])
+                    cls.objetos.append(v)
+        except FileNotFoundError:
+            pass
